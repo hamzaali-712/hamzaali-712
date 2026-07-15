@@ -1,4 +1,5 @@
 name: GitHub Snake Game
+
 on:
   schedule:
     - cron: "0 0 * * *"
@@ -6,12 +7,15 @@ on:
   push:
     branches:
       - main
+
 jobs:
   generate:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
-      - name: Generate GitHub Contributions Snake Animations
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Generate GitHub contributions snake animation
         uses: Platane/snk@v3
         with:
           github_user_name: hamzaali-712
@@ -21,6 +25,7 @@ jobs:
             dist/ocean.gif?color_snake=orange&color_dots=#bfd6f6,#8dbdff,#64a1f4,#4b91f1,#3c7dd9
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
       - name: Upload generated files
         uses: actions/upload-artifact@v4
         with:
