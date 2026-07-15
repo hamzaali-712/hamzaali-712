@@ -16,7 +16,7 @@ jobs:
       - name: Generate GitHub Contributions Snake Animations
         uses: Platane/snk@v3
         with:
-          github_user_name: mwakidenis
+          github_user_name: hamzaali-712
           outputs: |
             dist/github-snake.svg
             dist/github-snake-dark.svg?palette=github-dark

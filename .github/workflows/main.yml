@@ -1,4 +1,3 @@
-
 name: python script
 
 on:
@@ -18,8 +17,8 @@ jobs:
         run: |
           TIMESTAMP_FILE="updates.txt"
           echo "Last checked: $(date -u +"%Y-%m-%dT%H:%M:%SZ")" > "$TIMESTAMP_FILE"
-          git config user.name "mwakis bot"
-          git config user.email "mwakidenice@gmail.com"
+          git config user.name "github-actions"
+          git config user.email "github-actions@github.com"
           git add "$TIMESTAMP_FILE"
           if ! git diff --cached --quiet; then
             git commit -m "Update timestamp: $(date -u)"
