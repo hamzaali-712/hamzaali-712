@@ -73,8 +73,21 @@ I’m a driven Software Engineering student at COMSATS University Islamabad, Wah
 </div>
 
 <div align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=hamzaali-712&show_icons=true&theme=tokyonight&hide_border=true&count_private=true&title_color=22d3ee&icon_color=8b5cf6&text_color=c7d2fe&bg_color=0d1117" width="48%" alt="GitHub stats" />
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=hamzaali-712&layout=donut&theme=tokyonight&hide_border=true&title_color=22d3ee&text_color=c7d2fe&bg_color=0d1117" width="34%" alt="Top languages" />
+  <!-- Fallback: GitHub stats service is unreliable. Use stable badges and a compact top-langs summary. -->
+  <div style="display:flex;flex-wrap:wrap;gap:18px;justify-content:center;align-items:flex-start;">
+    <div style="min-width:360px;max-width:640px;">
+      <img src="https://github-readme-activity-graph.vercel.app/graph?username=hamzaali-712&theme=tokyo-night&hide_border=true&bg_color=0d1117&color=22d3ee&line=8b5cf6&point=c7d2fe" width="100%" alt="Activity graph" />
+    </div>
+    <div style="min-width:220px;max-width:320px;color:#c7d2fe;text-align:left;">
+      <p style="margin:0 0 6px 0;font-weight:700">Top languages</p>
+      <p style="margin:6px 0 8px 0;line-height:1.5">
+        <img src="https://skillicons.dev/icons?i=python" width="24" style="vertical-align:middle;margin-right:8px;"/> Python<br/>
+        <img src="https://skillicons.dev/icons?i=cpp" width="24" style="vertical-align:middle;margin-right:8px;"/> C++<br/>
+        <img src="https://skillicons.dev/icons?i=js" width="24" style="vertical-align:middle;margin-right:8px;"/> JavaScript
+      </p>
+      <p style="font-size:12px;color:#94a3b8;margin-top:8px;">Note: the hosted GitHub stats service is currently unavailable (503). Badges above provide reliable counts.</p>
+    </div>
+  </div>
 </div>
 
 <div align="center">
@@ -87,7 +100,9 @@ I’m a driven Software Engineering student at COMSATS University Islamabad, Wah
 ## 🏆 Trophies & Milestones
 
 <div align="center">
-  <img src="https://github-profile-trophy.vercel.app/?username=hamzaali-712&theme=algolia&column=6&margin-w=10&margin-h=10&no-frame=true" alt="GitHub trophies" />
+  <!-- Fallback trophy placeholder when external trophy service returns 402/paid -->
+  <img src="./assets/trophies-placeholder.svg" alt="GitHub trophies (placeholder)" width="60%" />
+  <p style="font-size:12px;color:#94a3b8;margin-top:8px;">The online trophy generator may require a paid tier; placeholder shown here.</p>
 </div>
 
 <div align="center">

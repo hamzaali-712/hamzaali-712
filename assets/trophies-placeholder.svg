@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="120" viewBox="0 0 800 120">
+  <rect width="100%" height="100%" fill="#0b1224"/>
+  <g fill="#f59e0b" font-family="Segoe UI, Arial, sans-serif" font-size="20">
+    <text x="50%" y="35" dominant-baseline="middle" text-anchor="middle" fill="#c7d2fe" font-size="22">Trophies & Milestones</text>
+    <text x="50%" y="70" dominant-baseline="middle" text-anchor="middle" fill="#94a3b8" font-size="14">GitHub trophy service currently unavailable — using local placeholder</text>
+  </g>
+</svg>
