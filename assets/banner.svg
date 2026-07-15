@@ -1,0 +1,93 @@
+<svg width="1200" height="300" viewBox="0 0 1200 300" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0b0f2a"/>
+      <stop offset="50%" stop-color="#120a2e"/>
+      <stop offset="100%" stop-color="#0a1224"/>
+    </linearGradient>
+    <linearGradient id="glow1" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#7c3aed"/>
+      <stop offset="50%" stop-color="#3b82f6"/>
+      <stop offset="100%" stop-color="#22d3ee"/>
+    </linearGradient>
+    <linearGradient id="glowText" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#a78bfa"/>
+      <stop offset="50%" stop-color="#60a5fa"/>
+      <stop offset="100%" stop-color="#22d3ee"/>
+    </linearGradient>
+    <radialGradient id="orb1" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#8b5cf6" stop-opacity="0.55"/>
+      <stop offset="100%" stop-color="#8b5cf6" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="orb2" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#22d3ee" stop-opacity="0.45"/>
+      <stop offset="100%" stop-color="#22d3ee" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="softGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="4" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <style>
+      .mono { font-family: 'Courier New', monospace; }
+      .sans { font-family: 'Segoe UI', Arial, sans-serif; }
+    </style>
+  </defs>
+
+  <rect width="1200" height="300" fill="url(#bg)"/>
+  <circle cx="150" cy="60" r="180" fill="url(#orb1)"/>
+  <circle cx="1080" cy="250" r="220" fill="url(#orb2)"/>
+
+  <!-- grid lines -->
+  <g stroke="#2a2f55" stroke-width="1" opacity="0.35">
+    <line x1="0" y1="60" x2="1200" y2="60"/>
+    <line x1="0" y1="120" x2="1200" y2="120"/>
+    <line x1="0" y1="180" x2="1200" y2="180"/>
+    <line x1="0" y1="240" x2="1200" y2="240"/>
+  </g>
+
+  <!-- left text block -->
+  <text x="60" y="100" class="sans" font-size="46" font-weight="700" fill="url(#glowText)" filter="url(#softGlow)">Hamza Ali</text>
+  <text x="60" y="140" class="sans" font-size="20" fill="#c7d2fe">Software Engineering Student · AI &amp; ML Developer</text>
+
+  <g class="mono" font-size="16" fill="#8ee6ff">
+    <text x="60" y="175">&gt; Machine Learning Intern @ FlyRank AI</text>
+    <text x="60" y="200">&gt; Building secure, intelligent systems</text>
+    <text x="60" y="225">&gt; Lahore, Pakistan 🇵🇰</text>
+  </g>
+
+  <rect x="58" y="245" width="150" height="30" rx="15" fill="none" stroke="url(#glow1)" stroke-width="1.5"/>
+  <text x="133" y="264" text-anchor="middle" class="mono" font-size="13" fill="#e2e8f0">status: online</text>
+  <circle cx="72" cy="260" r="4" fill="#22d3ee">
+    <animate attributeName="opacity" values="1;0.3;1" dur="1.6s" repeatCount="indefinite"/>
+  </circle>
+
+  <!-- right: glassmorphism code window -->
+  <g transform="translate(760,40)">
+    <rect x="0" y="0" width="380" height="220" rx="16" fill="#ffffff" opacity="0.04" stroke="url(#glow1)" stroke-width="1.3"/>
+    <rect x="0" y="0" width="380" height="34" rx="16" fill="#ffffff" opacity="0.05"/>
+    <circle cx="22" cy="17" r="6" fill="#ff5f56"/>
+    <circle cx="44" cy="17" r="6" fill="#ffbd2e"/>
+    <circle cx="66" cy="17" r="6" fill="#27c93f"/>
+    <text x="200" y="21" text-anchor="middle" class="mono" font-size="12" fill="#94a3b8">hamza.py</text>
+
+    <g class="mono" font-size="14" fill="#a5b4fc">
+      <text x="20" y="60"><tspan fill="#7dd3fc">class</tspan> <tspan fill="#c4b5fd">Engineer</tspan>:</text>
+      <text x="40" y="84"><tspan fill="#7dd3fc">def</tspan> <tspan fill="#93c5fd">__init__</tspan>(self):</text>
+      <text x="60" y="106">self.stack = [<tspan fill="#86efac">"Python"</tspan>,</text>
+      <text x="85" y="126"><tspan fill="#86efac">"C++"</tspan>, <tspan fill="#86efac">"JS"</tspan>]</text>
+      <text x="60" y="148">self.focus = <tspan fill="#86efac">"AI + Security"</tspan></text>
+      <text x="40" y="172"><tspan fill="#7dd3fc">while</tspan> True:</text>
+      <text x="60" y="194">build(), learn(), ship()</text>
+    </g>
+  </g>
+
+  <!-- floating particles -->
+  <g fill="#67e8f9">
+    <circle cx="640" cy="50" r="2.5"><animate attributeName="cy" values="50;30;50" dur="4s" repeatCount="indefinite"/></circle>
+    <circle cx="700" cy="230" r="2"><animate attributeName="cy" values="230;210;230" dur="3.2s" repeatCount="indefinite"/></circle>
+    <circle cx="600" cy="150" r="1.8"><animate attributeName="cy" values="150;135;150" dur="3.6s" repeatCount="indefinite"/></circle>
+  </g>
+</svg>
