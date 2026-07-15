@@ -2,6 +2,8 @@
 
 <img src="./assets/wave-top.svg" width="100%" alt="Wave divider" />
 
+<!-- render-trigger: force re-render to update badges/trophies -->
+
 <img src="./assets/banner.svg" width="100%" alt="Hamza Ali banner" />
 
 <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=24&pause=1000&color=22D3EE&center=true&vCenter=true&width=700&lines=Hamza+Ali;Software+Engineering+Student;Machine+Learning+Intern+%40+FlyRank+AI;AI+%26+Full+Stack+Developer;Open+Source+Contributor;Security+%2B+Systems+Thinker" alt="Typing SVG" />
