@@ -100,8 +100,14 @@ I’m a driven Software Engineering student at COMSATS University Islamabad, Wah
 ## 🏆 Trophies & Milestones
 
 <div align="center">
-  <!-- Fallback trophy placeholder when external trophy service returns 402/paid -->
-  <img src="./assets/trophies-placeholder.svg" alt="GitHub trophies (placeholder)" width="60%" />
+  <!-- Inlined SVG trophy placeholder to ensure visibility regardless of external services or cache -->
+  <svg xmlns="http://www.w3.org/2000/svg" width="60%" viewBox="0 0 800 120" preserveAspectRatio="xMidYMid meet">
+    <rect width="100%" height="100%" fill="#0b1224"/>
+    <g fill="#f59e0b" font-family="Segoe UI, Arial, sans-serif" font-size="20">
+      <text x="50%" y="35" dominant-baseline="middle" text-anchor="middle" fill="#c7d2fe" font-size="22">Trophies & Milestones</text>
+      <text x="50%" y="70" dominant-baseline="middle" text-anchor="middle" fill="#94a3b8" font-size="14">GitHub trophy service currently unavailable — using local placeholder</text>
+    </g>
+  </svg>
   <p style="font-size:12px;color:#94a3b8;margin-top:8px;">The online trophy generator may require a paid tier; placeholder shown here.</p>
 </div>
 
