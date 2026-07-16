@@ -1,4 +1,6 @@
 name: Gitartwork Contribution Graph
+permissions:
+  contents: write
 
 on:
   push:
@@ -7,9 +9,13 @@ jobs:
   build:
     name: Make gitartwork SVG
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
+        with:
+          persist-credentials: true
 
       - name: Generate gitartwork SVG
         uses: jasineri/gitartwork@v1
@@ -19,5 +25,8 @@ jobs:
 
       - name: Push generated artwork
         uses: jasineri/simple-push-action@v1
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          repository: ${{ github.repository }}
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
