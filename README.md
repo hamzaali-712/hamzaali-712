@@ -51,14 +51,43 @@ I'm a driven Software Engineering student at COMSATS University Islamabad, Wah C
 
 ## 🛠️ Tech Stack
 
-<p align="left">
-  <img src="https://skillicons.dev/icons?i=python,cpp,c,js,ts,html,css,mysql,git,github,vscode,idea,figma" alt="Tech stack icons" />
-</p>
+<div align="left">
 
-- AI & Data Science: Machine Learning fundamentals · NLP · Applied ML workflows
-- Languages: Python · C++ · C · JavaScript · HTML · CSS
-- Tools: VS Code · IntelliJ IDEA · GitHub · ClickUp · Microsoft Office Suite
-- Interests: Cybersecurity fundamentals · Secure system design · Product-minded development
+**Languages**
+
+<img src="https://skillicons.dev/icons?i=python,cpp,c,java,js,ts,html,css" alt="Languages" />
+
+**Frameworks & Libraries**
+
+<img src="https://skillicons.dev/icons?i=react,nextjs,express,fastapi,flask,streamlit" alt="Frameworks" />
+
+**Databases & Cloud**
+
+<img src="https://skillicons.dev/icons?i=mysql,postgres,supabase,sqlite" alt="Databases" />
+
+**Tools & Environments**
+
+<img src="https://skillicons.dev/icons?i=git,github,vscode,idea,jupyter,figma,postman" alt="Tools" />
+
+</div>
+
+<details>
+<summary><b>📋 Full Stack Breakdown</b></summary>
+<br>
+
+| Category | Technologies |
+| :-- | :-- |
+| **Languages** | Python · C++ · C · Java · JavaScript · TypeScript · HTML · CSS |
+| **AI & Data Science** | Scikit-learn · Pandas · DuckDB · NLP · ML Pipelines · Feature Engineering |
+| **Web Frameworks** | React · Next.js · Express.js · FastAPI · Flask · Streamlit |
+| **Databases** | MySQL · PostgreSQL · Supabase · SQLite |
+| **APIs & Services** | Google Vision API · GA4 · Google Search Console · AI APIs |
+| **Systems & Networking** | TCP Sockets · Tkinter · Multi-client Architecture |
+| **Desktop / OOP** | Java Swing · OOP Design Patterns |
+| **Tools** | Git · GitHub · Jupyter Notebook · VS Code · IntelliJ IDEA · Figma · Postman |
+| **CS Fundamentals** | DSA · OOP · BST · AVL Trees · Graphs · Hash Tables · Heaps |
+
+</details>
 
 ---
 
@@ -90,7 +119,7 @@ I'm a driven Software Engineering student at COMSATS University Islamabad, Wah C
 ## 🏆 Trophies & Milestones
 
 <div align="center">
-  <img src="https://github-profile-trophy.vercel.app/?username=hamzaali-712&theme=tokyonight&no-frame=true&column=7&margin-w=10&margin-h=10&no-bg=true" alt="GitHub Trophies" />
+  <img src="https://github-profile-trophy.vercel.app/?username=hamzaali-712&theme=tokyonight&no-frame=true&margin-w=6&margin-h=6" alt="GitHub Trophies" />
 </div>
 
 ---
@@ -99,9 +128,9 @@ I'm a driven Software Engineering student at COMSATS University Islamabad, Wah C
 
 <div align="center">
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/hamzaali-712/hamzaali-712/output/github-snake-dark.svg" />
-    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/hamzaali-712/hamzaali-712/output/github-snake.svg" />
-    <img alt="Contribution snake animation" src="https://raw.githubusercontent.com/hamzaali-712/hamzaali-712/output/github-snake.svg" width="100%" />
+    <source media="(prefers-color-scheme: dark)" srcset="./assets/github-snake-dark.svg" />
+    <source media="(prefers-color-scheme: light)" srcset="./assets/github-snake.svg" />
+    <img alt="Contribution snake animation" src="./assets/github-snake.svg" width="100%" />
   </picture>
 </div>
 
@@ -115,7 +144,7 @@ I'm a driven Software Engineering student at COMSATS University Islamabad, Wah C
   </a>
 </div>
 
-> The contribution animations above are generated automatically by GitHub Actions workflows and updated on a regular schedule.
+> Contribution animations are generated automatically by GitHub Actions and updated on a scheduled basis.
 
 ---
 
@@ -132,11 +161,14 @@ I'm a driven Software Engineering student at COMSATS University Islamabad, Wah C
 
 | Project | Focus | Stack |
 | :-- | :-- | :-- |
-| Safar AI | Route prediction and intelligent travel planning | Python · ML · NLP |
-| MediScript AI | Prescription understanding and healthcare intelligence | Python · Streamlit · AI APIs |
-| ShieldPay | Scam detection and financial safety workflows | React · Express · AI APIs |
-| Cyber Crime Reporting System | Secure reporting and evidence-based system design | Next.js · TypeScript · FastAPI |
-| MBPLDS | DSA-focused security tooling and algorithmic problem solving | C++ · DSA · Algorithms |
+| **FlyRank AI — ML Internship** | SEO content analysis, ML pipelines, feature engineering on Google Search Console & GA4 data | Python · Jupyter · DuckDB · Pandas · Scikit-learn · Git |
+| **ShieldPay** | AI-powered scam detection, transaction validation, fraud awareness & phishing prevention | React · Express.js · JavaScript · AI APIs · Git |
+| **MediScript AI** | Medical prescription analysis, drug interaction checks across 500K+ records, bilingual explanations | Python · Streamlit · Supabase · Google Vision API · Git |
+| **Cyber Crime Reporting System** | Secure cybercrime reporting, case management, evidence upload, admin dashboard | TypeScript · Next.js · Supabase · PostgreSQL · FastAPI · Git |
+| **Safar AI** | AI route prediction, travel time estimation, road blockage detection, fuel cost prediction | Python · ML · NLP · APIs · Git |
+| **Network CMD Panel** | Remote command execution via TCP sockets, real-time monitoring, multi-client architecture | Python · TCP Sockets · Tkinter · Git |
+| **MBPLDS** | CLI password leak detection using DSA: arrays, linked lists, stacks, BST, AVL trees, graphs | C++ · DSA · Algorithms · Git |
+| **CureOne** | Desktop healthcare management — patient, doctor, appointment & medical records | Java · Swing · MySQL · OOP · Git |
 
 <div align="center"><sub>Explore more repositories → <a href="https://github.com/hamzaali-712?tab=repositories">github.com/hamzaali-712</a></sub></div>
 
