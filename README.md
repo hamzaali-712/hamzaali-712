@@ -59,7 +59,7 @@ I'm a driven Software Engineering student at COMSATS University Islamabad, Wah C
 
 **Frameworks & Libraries**
 
-<img src="https://skillicons.dev/icons?i=react,nextjs,express,fastapi,flask,streamlit" alt="Frameworks" />
+<img src="https://skillicons.dev/icons?i=react,nextjs,express,fastapi,flask,pandas,scikitlearn" alt="Frameworks" />
 
 **Databases & Cloud**
 
@@ -67,7 +67,7 @@ I'm a driven Software Engineering student at COMSATS University Islamabad, Wah C
 
 **Tools & Environments**
 
-<img src="https://skillicons.dev/icons?i=git,github,vscode,idea,jupyter,figma,postman" alt="Tools" />
+<img src="https://skillicons.dev/icons?i=git,github,vscode,idea,anaconda,figma,postman" alt="Tools" />
 
 </div>
 
@@ -102,8 +102,7 @@ I'm a driven Software Engineering student at COMSATS University Islamabad, Wah C
 </div>
 
 <div align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=hamzaali-712&show_icons=true&theme=tokyonight&hide_border=true&bg_color=0d1117&title_color=22d3ee&icon_color=8b5cf6&text_color=c7d2fe&count_private=true" width="48%" alt="GitHub stats" />
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=hamzaali-712&layout=compact&theme=tokyonight&hide_border=true&bg_color=0d1117&title_color=22d3ee&text_color=c7d2fe&langs_count=8" width="48%" alt="Top languages" />
+  <img src="https://github-readme-stats.vercel.app/api?username=hamzaali-712&show_icons=true&theme=tokyonight&hide_border=true&bg_color=0d1117&title_color=22d3ee&icon_color=8b5cf6&text_color=c7d2fe&count_private=true" width="60%" alt="GitHub stats" />
 </div>
 
 <div align="center">
@@ -119,7 +118,7 @@ I'm a driven Software Engineering student at COMSATS University Islamabad, Wah C
 ## 🏆 Trophies & Milestones
 
 <div align="center">
-  <img src="https://github-profile-trophy.vercel.app/?username=hamzaali-712&theme=tokyonight&no-frame=true&margin-w=6&margin-h=6" alt="GitHub Trophies" />
+  <img src="https://github-trophies.vercel.app/?username=hamzaali-712&theme=tokyonight&no-frame=true&margin-w=6&margin-h=6" alt="GitHub Trophies" />
 </div>
 
 ---
@@ -128,9 +127,9 @@ I'm a driven Software Engineering student at COMSATS University Islamabad, Wah C
 
 <div align="center">
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="./assets/github-snake-dark.svg" />
-    <source media="(prefers-color-scheme: light)" srcset="./assets/github-snake.svg" />
-    <img alt="Contribution snake animation" src="./assets/github-snake.svg" width="100%" />
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/hamzaali-712/hamzaali-712/output/github-snake-dark.svg" />
+    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/hamzaali-712/hamzaali-712/output/github-snake.svg" />
+    <img alt="Contribution snake animation" src="https://raw.githubusercontent.com/hamzaali-712/hamzaali-712/output/github-snake.svg" width="100%" />
   </picture>
 </div>
 
