@@ -19,3 +19,5 @@ jobs:
 
       - name: Push generated artwork
         uses: jasineri/simple-push-action@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
