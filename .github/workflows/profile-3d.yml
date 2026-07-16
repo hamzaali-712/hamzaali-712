@@ -35,6 +35,9 @@ jobs:
             cp profile-3d-contrib/profile-night-rainbow.svg profile-3d-contrib/profile-3d.svg
           elif ls profile-3d-contrib/*.svg 2>/dev/null | grep -q .; then
             cp profile-3d-contrib/*.svg profile-3d-contrib/profile-3d.svg
+          else
+            echo "No generated 3D SVG found"
+            exit 0
           fi
 
       - name: Commit and push changes
@@ -44,7 +47,14 @@ jobs:
           git config user.name github-actions
           git config user.email github-actions@github.com
           git remote set-url origin https://x-access-token:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git
-          git add profile-3d-contrib/profile-3d.svg
-          if git commit -m "generated profile 3D svg"; then
-            git push origin HEAD:main
+          if [ ! -f profile-3d-contrib/profile-3d.svg ]; then
+            echo "No generated profile 3D SVG to commit"
+            exit 0
           fi
+          if git diff --quiet HEAD -- profile-3d-contrib/profile-3d.svg; then
+            echo "No changes to commit"
+            exit 0
+          fi
+          git add profile-3d-contrib/profile-3d.svg
+          git commit -m "generated profile 3D svg"
+          git push origin HEAD:main
