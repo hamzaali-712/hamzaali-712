@@ -119,7 +119,7 @@ I’m a driven Software Engineering student at COMSATS University Islamabad, Wah
 
 <div align="center">
   <!-- Fallback local placeholder while workflow generates the 3D SVG -->
-  <a href="https://raw.githubusercontent.com/hamzaali-712/hamzaali-712/main/profile-3d-contrib/profile-night-rainbow.svg" target="_blank">
+  <a href="https://raw.githubusercontent.com/hamzaali-712/hamzaali-712/main/profile-3d-contrib/profile-3d.svg" target="_blank">
     <img src="./assets/profile-3d-placeholder.svg" alt="3D contribution (placeholder)" width="100%" />
   </a>
   <p style="margin-top:6px; color:#94a3b8; font-size:12px;">The final 3D contribution SVG will replace this placeholder once <code>.github/workflows/profile-3d.yml</code> runs and commits the generated asset.</p>

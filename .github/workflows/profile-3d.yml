@@ -7,14 +7,20 @@ on:
 
 permissions:
   contents: write
+  workflow: write
 
 jobs:
   build:
     runs-on: ubuntu-latest
     name: generate-github-profile-3d-contrib
+    permissions:
+      contents: write
+      workflow: write
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
+        with:
+          persist-credentials: true
 
       - name: Generate 3D contribution artwork
         uses: yoshi389111/github-profile-3d-contrib@latest
@@ -22,11 +28,23 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           USERNAME: ${{ github.repository_owner }}
 
+      - name: Normalize 3D output path
+        run: |
+          mkdir -p profile-3d-contrib
+          if [ -f profile-3d-contrib/profile-night-rainbow.svg ]; then
+            cp profile-3d-contrib/profile-night-rainbow.svg profile-3d-contrib/profile-3d.svg
+          elif ls profile-3d-contrib/*.svg 2>/dev/null | grep -q .; then
+            cp profile-3d-contrib/*.svg profile-3d-contrib/profile-3d.svg
+          fi
+
       - name: Commit and push changes
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           git config user.name github-actions
           git config user.email github-actions@github.com
-          git add -A .
-          if git commit -m "generated"; then
-            git push
+          git remote set-url origin https://x-access-token:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git
+          git add profile-3d-contrib/profile-3d.svg
+          if git commit -m "generated profile 3D svg"; then
+            git push origin HEAD:main
           fi

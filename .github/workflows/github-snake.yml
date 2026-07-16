@@ -8,12 +8,21 @@ on:
     branches:
       - main
 
+permissions:
+  contents: write
+  workflow: write
+
 jobs:
   generate:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      workflow: write
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
+        with:
+          persist-credentials: true
 
       - name: Generate GitHub contributions snake animation
         uses: Platane/snk@v3
@@ -26,8 +35,31 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
+      - name: Copy generated snake asset to local path
+        run: |
+          mkdir -p assets
+          if [ -f dist/github-snake.svg ]; then
+            cp dist/github-snake.svg assets/github-snake.svg
+          fi
+          if [ -f dist/github-snake-dark.svg ]; then
+            cp dist/github-snake-dark.svg assets/github-snake-dark.svg
+          fi
+
       - name: Upload generated files
         uses: actions/upload-artifact@v4
         with:
           name: snake-assets
           path: dist
+
+      - name: Commit and push generated snake asset
+        if: github.actor != 'github-actions[bot]'
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          git config user.name github-actions
+          git config user.email github-actions@github.com
+          git remote set-url origin https://x-access-token:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git
+          git add assets/github-snake.svg
+          if git commit -m "generated github-snake.svg"; then
+            git push origin HEAD:main
+          fi
