@@ -1,8 +1,8 @@
-name: GitHub Snake Game
+name: GitHub Snake Animation
 
 on:
   schedule:
-    - cron: "0 0 * * *"
+    - cron: "0 0 * * *"   # daily at midnight UTC
   workflow_dispatch:
   push:
     branches:
@@ -10,14 +10,12 @@ on:
 
 permissions:
   contents: write
-  workflow: write
 
 jobs:
   generate:
     runs-on: ubuntu-latest
     permissions:
       contents: write
-      workflow: write
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -29,7 +27,7 @@ jobs:
       - name: Generate GitHub contributions snake animation
         uses: Platane/snk@v3
         with:
-          github_user_name: hamzaali-712
+          github_user_name: ${{ github.repository_owner }}
           outputs: |
             dist/github-snake.svg
             dist/github-snake-dark.svg?palette=github-dark
@@ -37,37 +35,12 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Copy generated snake asset to local path
-        run: |
-          mkdir -p assets
-          if [ -f dist/github-snake.svg ]; then
-            cp dist/github-snake.svg assets/github-snake.svg
-          fi
-          if [ -f dist/github-snake-dark.svg ]; then
-            cp dist/github-snake-dark.svg assets/github-snake-dark.svg
-          fi
-
-      - name: Upload generated files
-        uses: actions/upload-artifact@v4
+      - name: Deploy snake assets to output branch
+        uses: crazy-max/ghaction-github-pages@v4
         with:
-          name: snake-assets
-          path: dist
-
-      - name: Commit and push generated snake asset
+          target_branch: output
+          build_dir: dist
+          keep_history: true
+          commit_message: "chore: regenerate snake animation [skip ci]"
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: |
-          git config user.name github-actions
-          git config user.email github-actions@github.com
-          git remote set-url origin https://x-access-token:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git
-          if [ ! -f assets/github-snake.svg ]; then
-            echo "No generated snake SVG to commit"
-            exit 0
-          fi
-          git add assets/github-snake.svg
-          if git diff --cached --quiet; then
-            echo "No changes to commit"
-            exit 0
-          fi
-          git commit -m "generated github-snake.svg"
-          git push origin HEAD:main

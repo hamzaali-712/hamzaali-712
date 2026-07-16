@@ -2,8 +2,6 @@
 
 <img src="./assets/wave-top.svg" width="100%" alt="Wave divider" />
 
-<!-- render-trigger: force re-render to update badges/trophies -->
-
 <img src="./assets/banner.svg" width="100%" alt="Hamza Ali banner" />
 
 <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=24&pause=1000&color=22D3EE&center=true&vCenter=true&width=700&lines=Hamza+Ali;Software+Engineering+Student;Machine+Learning+Intern+%40+FlyRank+AI;AI+%26+Full+Stack+Developer;Security+%2B+Systems+Thinker" alt="Typing SVG" />
@@ -29,7 +27,7 @@
 
 <img src="./assets/about.svg" align="right" width="320" alt="About me illustration" />
 
-I’m a driven Software Engineering student at COMSATS University Islamabad, Wah Campus, with a strong interest in AI, machine learning, secure systems, and building practical software that solves real-world problems. I currently work as a Machine Learning Intern at FlyRank AI and enjoy turning ideas into reliable products through academic projects, hackathons, and hands-on internships.
+I'm a driven Software Engineering student at COMSATS University Islamabad, Wah Campus, with a strong interest in AI, machine learning, secure systems, and building practical software that solves real-world problems. I currently work as a Machine Learning Intern at FlyRank AI and enjoy turning ideas into reliable products through academic projects, hackathons, and hands-on internships.
 
 - 🎓 BS Software Engineering — COMSATS University Islamabad, Wah Campus
 - 🤖 Machine Learning Intern @ FlyRank AI
@@ -75,26 +73,16 @@ I’m a driven Software Engineering student at COMSATS University Islamabad, Wah
 </div>
 
 <div align="center">
-  <!-- Fallback: GitHub stats service is unreliable. Use stable badges and a compact top-langs summary. -->
-  <div style="display:flex;flex-wrap:wrap;gap:18px;justify-content:center;align-items:flex-start;">
-    <div style="min-width:360px;max-width:640px;">
-      <img src="https://github-readme-activity-graph.vercel.app/graph?username=hamzaali-712&theme=tokyo-night&hide_border=true&bg_color=0d1117&color=22d3ee&line=8b5cf6&point=c7d2fe" width="100%" alt="Activity graph" />
-    </div>
-    <div style="min-width:220px;max-width:320px;color:#c7d2fe;text-align:left;">
-      <p style="margin:0 0 6px 0;font-weight:700">Top languages</p>
-      <p style="margin:6px 0 8px 0;line-height:1.5">
-        <img src="https://skillicons.dev/icons?i=python" width="24" style="vertical-align:middle;margin-right:8px;"/> Python<br/>
-        <img src="https://skillicons.dev/icons?i=cpp" width="24" style="vertical-align:middle;margin-right:8px;"/> C++<br/>
-        <img src="https://skillicons.dev/icons?i=js" width="24" style="vertical-align:middle;margin-right:8px;"/> JavaScript
-      </p>
-      <p style="font-size:12px;color:#94a3b8;margin-top:8px;">Note: the hosted GitHub stats service is currently unavailable (503). Badges above provide reliable counts.</p>
-    </div>
-  </div>
+  <img src="https://github-readme-stats.vercel.app/api?username=hamzaali-712&show_icons=true&theme=tokyonight&hide_border=true&bg_color=0d1117&title_color=22d3ee&icon_color=8b5cf6&text_color=c7d2fe&count_private=true" width="48%" alt="GitHub stats" />
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=hamzaali-712&layout=compact&theme=tokyonight&hide_border=true&bg_color=0d1117&title_color=22d3ee&text_color=c7d2fe&langs_count=8" width="48%" alt="Top languages" />
 </div>
 
 <div align="center">
-  <img src="https://github-readme-streak-stats.herokuapp.com/?user=hamzaali-712&theme=tokyonight&hide_border=true&background=0d1117&ring=22d3ee&fire=8b5cf6&currStreakLabel=22d3ee" width="48%" alt="GitHub streak" />
-  <img src="https://github-readme-activity-graph.vercel.app/graph?username=hamzaali-712&theme=tokyo-night&hide_border=true&bg_color=0d1117&color=22d3ee&line=8b5cf6&point=c7d2fe" width="48%" alt="Activity graph" />
+  <img src="https://streak-stats.demolab.com/?user=hamzaali-712&theme=tokyonight&hide_border=true&background=0d1117&ring=22d3ee&fire=8b5cf6&currStreakLabel=22d3ee" width="70%" alt="GitHub streak" />
+</div>
+
+<div align="center">
+  <img src="https://github-readme-activity-graph.vercel.app/graph?username=hamzaali-712&theme=tokyo-night&hide_border=true&bg_color=0d1117&color=22d3ee&line=8b5cf6&point=c7d2fe&area=true" width="100%" alt="Activity graph" />
 </div>
 
 ---
@@ -102,30 +90,32 @@ I’m a driven Software Engineering student at COMSATS University Islamabad, Wah
 ## 🏆 Trophies & Milestones
 
 <div align="center">
-  <!-- Inlined SVG trophy placeholder to ensure visibility regardless of external services or cache -->
-  <svg xmlns="http://www.w3.org/2000/svg" width="60%" viewBox="0 0 800 120" preserveAspectRatio="xMidYMid meet">
-    <rect width="100%" height="100%" fill="#0b1224"/>
-    <g fill="#f59e0b" font-family="Segoe UI, Arial, sans-serif" font-size="20">
-      <text x="50%" y="35" dominant-baseline="middle" text-anchor="middle" fill="#c7d2fe" font-size="22">Trophies & Milestones</text>
-      <text x="50%" y="70" dominant-baseline="middle" text-anchor="middle" fill="#94a3b8" font-size="14">GitHub trophy service currently unavailable — using local placeholder</text>
-    </g>
-  </svg>
-  <p style="font-size:12px;color:#94a3b8;margin-top:8px;">The online trophy generator may require a paid tier; placeholder shown here.</p>
+  <img src="https://github-profile-trophy.vercel.app/?username=hamzaali-712&theme=tokyonight&no-frame=true&column=7&margin-w=10&margin-h=10&no-bg=true" alt="GitHub Trophies" />
 </div>
 
+---
+
+## 🐍 Contribution Snake
+
 <div align="center">
-  <img src="./assets/github-snake.svg" alt="Contribution snake" width="100%" />
-  <p style="font-size:12px;color:#94a3b8;margin-top:8px;">This asset is generated by <code>.github/workflows/github-snake.yml</code>.</p>
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/hamzaali-712/hamzaali-712/output/github-snake-dark.svg" />
+    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/hamzaali-712/hamzaali-712/output/github-snake.svg" />
+    <img alt="Contribution snake animation" src="https://raw.githubusercontent.com/hamzaali-712/hamzaali-712/output/github-snake.svg" width="100%" />
+  </picture>
 </div>
+
+---
+
+## 🌐 3D Contribution Graph
 
 <div align="center">
   <a href="./profile-3d-contrib/profile-3d.svg" target="_blank">
     <img src="./profile-3d-contrib/profile-3d.svg" alt="3D contribution graph" width="100%" />
   </a>
-  <p style="margin-top:6px; color:#94a3b8; font-size:12px;">This SVG is generated by <code>.github/workflows/profile-3d.yml</code>.</p>
 </div>
 
-> The contribution animations above are generated by [.github/workflows/github-snake.yml](.github/workflows/github-snake.yml) and [.github/workflows/profile-3d.yml](.github/workflows/profile-3d.yml) and updated automatically.
+> The contribution animations above are generated automatically by GitHub Actions workflows and updated on a regular schedule.
 
 ---
 
@@ -169,7 +159,7 @@ I’m a driven Software Engineering student at COMSATS University Islamabad, Wah
 
 ## ☕ Fun Zone
 
-> “A great programmer thinks about the program on a constant basis, whether driving or eating. Their method takes an incredible amount of mental energy.”
+> "A great programmer thinks about the program on a constant basis, whether driving or eating. Their method takes an incredible amount of mental energy."
 
 ```text
 $ whoami

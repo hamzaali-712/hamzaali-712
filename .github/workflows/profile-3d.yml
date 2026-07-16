@@ -2,12 +2,11 @@ name: GitHub Profile 3D Contrib
 
 on:
   schedule:
-    - cron: "*/15 * * * *"
+    - cron: "0 2 * * 0"   # weekly on Sundays at 02:00 UTC
   workflow_dispatch:
 
 permissions:
   contents: write
-  workflow: write
 
 jobs:
   build:
@@ -15,7 +14,6 @@ jobs:
     name: generate-github-profile-3d-contrib
     permissions:
       contents: write
-      workflow: write
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -25,23 +23,26 @@ jobs:
           fetch-depth: 0
 
       - name: Generate 3D contribution artwork
-        uses: yoshi389111/github-profile-3d-contrib@latest
+        uses: yoshi389111/github-profile-3d-contrib@v0.9.3
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           USERNAME: ${{ github.repository_owner }}
 
-      - name: Normalize 3D output path
+      - name: Move generated SVGs to profile-3d-contrib folder
         run: |
           mkdir -p profile-3d-contrib
-          generated=$(find . -maxdepth 2 -type f -name '*.svg' | grep -E 'profile.*(night|season|south|gitblock|3d)' | head -n 1 || true)
-          if [ -n "$generated" ]; then
-            cp "$generated" profile-3d-contrib/profile-3d.svg
-          elif [ -f profile-3d-contrib/profile-night-rainbow.svg ]; then
-            cp profile-3d-contrib/profile-night-rainbow.svg profile-3d-contrib/profile-3d.svg
-          elif ls profile-3d-contrib/*.svg 2>/dev/null | grep -q .; then
-            cp profile-3d-contrib/*.svg profile-3d-contrib/profile-3d.svg
+          if ls profile-3d-contrib/*.svg 2>/dev/null | grep -q .; then
+            # Copy the recommended night-rainbow variant as the primary display file
+            if [ -f profile-3d-contrib/profile-night-rainbow.svg ]; then
+              cp profile-3d-contrib/profile-night-rainbow.svg profile-3d-contrib/profile-3d.svg
+            else
+              # Fall back to first available SVG
+              first=$(ls profile-3d-contrib/*.svg | head -n 1)
+              cp "$first" profile-3d-contrib/profile-3d.svg
+            fi
+            echo "profile-3d.svg written successfully"
           else
-            echo "No generated 3D SVG found"
+            echo "No 3D SVGs found — skipping"
             exit 0
           fi
 
@@ -49,17 +50,17 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          git config user.name github-actions
-          git config user.email github-actions@github.com
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
           git remote set-url origin https://x-access-token:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git
           if [ ! -f profile-3d-contrib/profile-3d.svg ]; then
-            echo "No generated profile 3D SVG to commit"
+            echo "Nothing to commit"
             exit 0
           fi
-          git add profile-3d-contrib/profile-3d.svg
+          git add profile-3d-contrib/
           if git diff --cached --quiet; then
             echo "No changes to commit"
             exit 0
           fi
-          git commit -m "generated profile 3D svg"
+          git commit -m "chore: regenerate 3D contribution graph [skip ci]"
           git push origin HEAD:main
